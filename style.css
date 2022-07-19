@@ -313,6 +313,11 @@ body>*{
     width: 90%;
 }
 
+form{
+    display: grid;
+    gap: 0.5rem;
+}
+
 .popUpInsertName.showPopUpInsertName{
     display: grid;
 }

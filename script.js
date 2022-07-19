@@ -20,6 +20,7 @@ const hard = document.querySelector(".hard");
 const diffGrid = document.querySelector(".diffGrid");
 const restartBtn = document.querySelectorAll(".restartBtn");
 const card = document.querySelectorAll("[data-cell]");
+const formInput = document.querySelector("form");
 
 
 //Flip On Start
@@ -72,7 +73,8 @@ inputName.addEventListener("keyup", () => {
   const trimInput = inputName.value.trim();
   if (trimInput.length > 1) {
     enterNameBtn.classList.remove("uSNone");
-    enterNameBtn.addEventListener("click", () => {
+    formInput.addEventListener("submit", (e) => {
+      e.preventDefault();
       appearRandom();
       showGamePage();
     });
